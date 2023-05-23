@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include "main.h"
+
+/**
+ * main - Write a function that prints the alphabet, in lowercase
+ *
+ * Return: Always 0 (success)
+ */
+
+void print_alphabet(void)
+{
+	char a = 'a';
+
+	while (a <= 'z')
+	{
+		_putchar(a);
+		a++;
+	}
+	_putchar('\n');
+}
