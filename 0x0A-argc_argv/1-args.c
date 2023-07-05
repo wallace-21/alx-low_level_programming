@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int num = 0;
-	
+
 	(void) *argv;
 
 
