@@ -14,11 +14,11 @@ int binary_search(int *array, size_t size, int value)
 	size_t start = 0;
 	size_t end = size - 1;
 	size_t mid;
-	
+
 	while (start <= end)
 	{
 		mid = start + (end - start) / 2;
-		
+
 		if (value == array[mid])
 		{
 			return (mid);
@@ -32,6 +32,6 @@ int binary_search(int *array, size_t size, int value)
 			start = mid + 1;
 		}
 	}
-	
+
 	return (-1);
 }
