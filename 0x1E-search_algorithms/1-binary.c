@@ -1,24 +1,27 @@
 #include <stdio.h>
+#include "search_algos.h"
 
 /**
- * print_array - function that prints the contents of an array
+ * print_array - function that prints the contents of a subarray
  * @a: pointer to the first element of the array
- * @n: number of elements in the array
+ * @start: start index of the subarray
+ * @end: end index of the subarray
  */
 
-void print_array(int *a, int n)
+void print_array(int *a, size_t start, size_t end)
 {
-	int b;
+	size_t i;
 
-	for (b = 0; b < (n - 1); b++)
+	for (i = start; i < end; i++)
 	{
-		printf("%d, ", a[b]);
+		printf("%d, ", a[i]);
 	}
 
-	if (b == (n - 1))
+	if (i == end)
 	{
-		printf("%d", a[n - 1]);
+		printf("%d", a[end]);
 	}
+
 	printf("\n");
 }
 
@@ -37,11 +40,10 @@ int binary_search(int *array, size_t size, int value)
 	size_t end = size - 1;
 	size_t mid;
 
-	/*printf("Searching in array: ");*/
 	while (start <= end)
 	{
 		printf("Searching in array: ");
-		print_array(array, size);
+		print_array(array, start, end);
 
 		mid = start + (end - start) / 2;
 
